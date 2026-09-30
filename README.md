@@ -176,3 +176,23 @@ Finance-Tracker/
                     ┌─────────────────────┐
                     │   MongoDB Atlas     │
                     └─────────────────────┘
+
+
+
+## 📸 Screenshots
+
+### 🏠 Dashboard Overview
+
+![Dashboard Overview](screenshots/dashboard.png)
+
+### 📊 Financial Summary & Analytics
+
+![Financial Summary](screenshots/financial-summary.png)
+
+### 💸 Expense Distribution
+
+![Expense Distribution](screenshots/expense-distribution.png)
+
+### 💰 Recent Income & Expenses
+
+![Recent Income and Expenses](screenshots/recent-transactions.png)
