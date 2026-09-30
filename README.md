@@ -183,16 +183,16 @@ Finance-Tracker/
 
 ### 🏠 Dashboard Overview
 
-![Dashboard Overview](screenshots/dashboard.png)
+![Dashboard Overview](./screenshots/dashboard.png)
 
 ### 📊 Financial Summary & Analytics
 
-![Financial Summary](screenshots/financial-summary.png)
+![Financial Summary](./screenshots/financial-summary.png)
 
 ### 💸 Expense Distribution
 
-![Expense Distribution](screenshots/expense-distribution.png)
+![Expense Distribution](./screenshots/expense-distribution.png)
 
 ### 💰 Recent Income & Expenses
 
-![Recent Income and Expenses](screenshots/recent-transactions.png)
+![Recent Income and Expenses](./screenshots/recent-transactions.png)
