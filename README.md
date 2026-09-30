@@ -172,7 +172,7 @@ Finance-Tracker/
 │   └── vite.config.js
 │
 ├── .gitignore
-└── README.md
+└── README.md ```
                     ┌─────────────────────┐
                     │   MongoDB Atlas     │
                     └─────────────────────┘
