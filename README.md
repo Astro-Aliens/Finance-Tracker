@@ -120,9 +120,9 @@ The project was developed and studied as part of my final-year project work, usi
                     └──────────┬──────────┘
                                │
                                ▼
-
-
-
+                    ┌─────────────────────┐
+                    │   MongoDB Atlas     │
+                    └─────────────────────┘
 
 PROJECT STRUCTURE :
 Finance-Tracker/
@@ -174,11 +174,6 @@ Finance-Tracker/
 ├── .gitignore
 └── README.md
  ```
-                    ┌─────────────────────┐
-                    │   MongoDB Atlas     │
-                    └─────────────────────┘
-
-
 
 ## 📸 Screenshots
 
