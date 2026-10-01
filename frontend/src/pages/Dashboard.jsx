@@ -44,7 +44,7 @@ import {
 } from "recharts";
 import AddTransactionModal from "../components/Add";
 
-const API_BASE = "http://localhost:4000/api";
+const API_BASE = "/api";
 
 const getAuthHeader = () => {
   const token =
@@ -77,7 +77,7 @@ const Dashboard = () => {
   const {
     transactions: outletTransactions = [],
     timeFrame = "monthly",
-    setTimeFrame = () => {},
+    setTimeFrame = () => { },
     refreshTransactions,
   } = useOutletContext();
 
@@ -320,7 +320,7 @@ const Dashboard = () => {
             typeof data.savings !== "undefined"
               ? Number(data.savings)
               : Number(data.monthlyIncome || 0) -
-                Number(data.monthlyExpense || 0),
+              Number(data.monthlyExpense || 0),
           savingsRate:
             typeof data.savingsRate !== "undefined" ? data.savingsRate : null,
           spendByCategory: data.spendByCategory || {},
@@ -474,9 +474,8 @@ const Dashboard = () => {
           value={`$${Math.round(displayExpenses).toLocaleString()}`}
           additionalContent={
             <div
-              className={`mt-2 text-xs flex items-center gap-1 ${
-                expenseChange >= 0 ? trendStyles.positive : trendStyles.negative
-              }`}
+              className={`mt-2 text-xs flex items-center gap-1 ${expenseChange >= 0 ? trendStyles.positive : trendStyles.negative
+                }`}
             >
               {expenseChange >= 0 ? (
                 <TrendingUp className=" w-4 h-4" />
@@ -514,11 +513,10 @@ const Dashboard = () => {
 
               {typeof overviewMeta.savingsRate === "number" && (
                 <span
-                  className={`px-2 py-1 rounded-full text-xs font-medium ${
-                    overviewMeta.savingsRate < 0
+                  className={`px-2 py-1 rounded-full text-xs font-medium ${overviewMeta.savingsRate < 0
                       ? trendStyles.negativeRate
                       : trendStyles.positiveRate
-                  }`}
+                    }`}
                 >
                   {overviewMeta.savingsRate}%
                 </span>

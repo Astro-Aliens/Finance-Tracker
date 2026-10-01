@@ -25,7 +25,7 @@ import {
 import axios from "axios";
 import { Outlet } from "react-router-dom";
 
-const API_BASE = "http://localhost:4000/api";
+const API_BASE = "/api";
 const CATEGORY_ICONS = {
   Food: <Utensils className="w-4 h-4" />,
   Housing: <Home className="w-4 h-4" />,
@@ -220,8 +220,8 @@ const Layout = ({ onLogout, user }) => {
     const savingsRate =
       last30DaysIncome > 0
         ? Math.round(
-            ((last30DaysIncome - last30DaysExpenses) / last30DaysIncome) * 100,
-          )
+          ((last30DaysIncome - last30DaysExpenses) / last30DaysIncome) * 100,
+        )
         : 0;
 
     const last60DaysAgo = new Date(now);
@@ -239,10 +239,10 @@ const Layout = ({ onLogout, user }) => {
     const expenseChange =
       previous30DaysExpenses > 0
         ? Math.round(
-            ((last30DaysExpenses - previous30DaysExpenses) /
-              previous30DaysExpenses) *
-              100,
-          )
+          ((last30DaysExpenses - previous30DaysExpenses) /
+            previous30DaysExpenses) *
+          100,
+        )
         : 0;
 
     return {

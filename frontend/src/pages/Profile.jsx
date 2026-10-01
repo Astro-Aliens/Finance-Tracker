@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 
-const BASE_URL = "http://localhost:4000/api";
+const BASE_URL = "/api";
 
 Modal.setAppElement("#root");
 // Move PasswordInput component outside of ProfilePage to prevent recreation on every render
@@ -20,9 +20,8 @@ const PasswordInput = memo(
           name={name}
           value={value}
           onChange={onChange}
-          className={`${profileStyles.inputWithError} ${
-            error ? "border-red-300" : "border-gray-200"
-          }`}
+          className={`${profileStyles.inputWithError} ${error ? "border-red-300" : "border-gray-200"
+            }`}
           placeholder={`Enter ${label.toLowerCase()}`}
           disabled={disabled}
           // Add key prop to help React identify the input
@@ -48,7 +47,7 @@ const PasswordInput = memo(
 
 PasswordInput.displayName = "PasswordInput";
 
-const Profile = ({onUpdateProfile, onLogout }) => {
+const Profile = ({ onUpdateProfile, onLogout }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
@@ -141,7 +140,7 @@ const Profile = ({onUpdateProfile, onLogout }) => {
   }, []);
 
   // save profile
-// save profile
+  // save profile
   const handleSaveProfile = async () => {
     try {
       const data = await handleApiRequest("put", "/user/profile", tempUser);

@@ -30,7 +30,7 @@ import { getTimeFrameRange, generateChartPoints } from "../components/Helpers";
 import { CATEGORY_ICONS } from "../assets/color";
 import { expensePageStyles as styles } from "../assets/dummyStyles";
 
-const API_BASE = "http://localhost:4000/api";
+const API_BASE = "/api";
 
 /**
  * Helper: convert date (or datetime) to ISO by attaching client current time
@@ -64,7 +64,7 @@ const ExpensePage = () => {
   const {
     transactions: outletTransactions = [],
     timeFrame = "monthly",
-    setTimeFrame = () => {},
+    setTimeFrame = () => { },
     refreshTransactions,
   } = useOutletContext();
 
@@ -248,7 +248,7 @@ const ExpensePage = () => {
           : timeFrame === "yearly"
             ? d.date.getMonth() === transDate.getMonth()
             : d.date.getDate() === transDate.getDate() &&
-              d.date.getMonth() === transDate.getMonth(),
+            d.date.getMonth() === transDate.getMonth(),
       );
       point && (point.expense += Math.round(Number(transaction.amount)));
     });
@@ -278,7 +278,7 @@ const ExpensePage = () => {
       const serverMsg = err?.response?.data?.message;
       alert(
         serverMsg ||
-          `Server error while ${method === "post" ? "adding" : method === "put" ? "updating" : "deleting"} expense.`,
+        `Server error while ${method === "post" ? "adding" : method === "put" ? "updating" : "deleting"} expense.`,
       );
       throw err;
     } finally {

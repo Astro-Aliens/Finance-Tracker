@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { ArrowLeft, Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 
-const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
+const Signup = ({ API_URL = "", onSignup }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -152,9 +152,8 @@ const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
                   id="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className={`${signupStyles.input} ${
-                    errors.name ? "border-red-300" : "border-gray-200"
-                  }`}
+                  className={`${signupStyles.input} ${errors.name ? "border-red-300" : "border-gray-200"
+                    }`}
                   placeholder="John Doe"
                 />
               </div>
@@ -177,9 +176,8 @@ const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className={`${signupStyles.input} ${
-                    errors.email ? "border-red-300" : "border-gray-200"
-                  }`}
+                  className={`${signupStyles.input} ${errors.email ? "border-red-300" : "border-gray-200"
+                    }`}
                   placeholder="your@example.com"
                 />
               </div>
@@ -202,9 +200,8 @@ const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className={`${signupStyles.passwordInput} ${
-                    errors.password ? "border-red-300" : "border-gray-200"
-                  }`}
+                  className={`${signupStyles.passwordInput} ${errors.password ? "border-red-300" : "border-gray-200"
+                    }`}
                   placeholder="●●●●●●"
                 />
 
@@ -242,9 +239,8 @@ const Signup = ({ API_URL = "http://localhost:4000", onSignup }) => {
 
             <button
               type="submit"
-              className={`${signupStyles.button} ${
-                isLoading ? signupStyles.buttonDisabled : ""
-              }`}
+              className={`${signupStyles.button} ${isLoading ? signupStyles.buttonDisabled : ""
+                }`}
               disabled={isLoading}
             >
               {isLoading ? (
